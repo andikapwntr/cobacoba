@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    <input type="number" placeholder="berapa menit" id="">
+    <input type="button" id="start" value="Start">
+    <input type="button" id="stop" value="Stop" disabled>
+    <input type="button" id="reset" onclick="" value="Reset">
+
+    <script>
+
+
+        var time = document.getElementById('h1')[0]
+        var input
+        var timeAwal = input? parseInt(input)*60:0
+        function timer(a){
+            var jam = Math.floor(a/(60*60))
+            var sisamenit = a%(60*60)
+            var menit = Math.floor(sisamenit/60)
+            var sisadetik = sisamenit%60
+            var detik = sisadetik%60
+            return{jam,menit,detik}
+
+        }
+
+        const tampilkan=(a)=>{
+            var jam= timer(a).jam<10?'0'+timer(a).jam:timer(a).jam
+        }
+    </script>
+    
+    
+</body>
+</html>
